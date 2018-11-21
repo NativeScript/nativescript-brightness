@@ -24,7 +24,7 @@
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-brightness && tns plugin add ../src",
         "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
-        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
         "prepack": "npm run build.native"
     },
     "keywords": [
@@ -52,7 +52,6 @@
         "tslint": "^5.11.0",
         "semver": "^5.6.0"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "bootstrapper": "nativescript-plugin-seed"
 }
