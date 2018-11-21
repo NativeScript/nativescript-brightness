@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+  xmlns:ui="nativescript-brightness">
+  <StackLayout class="p-20">
+    <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
+    <GridLayout class="m-15" rows="auto auto" columns="50 * 50">
+      <Label row="1" col="0" text="{{ minValue }}" textWrap="true" fontSize="15"/>
+      <Slider row="1" col="1" value="{{ sliderValue }}" minValue="{{ minValue }}" maxValue="{{ maxValue }}"/>
+      <Label row="1" col="2" text="{{ maxValue }}" textWrap="true" fontSize="20"/>
+    </GridLayout>
+  </StackLayout>
+</Page>
