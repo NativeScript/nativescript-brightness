@@ -1,8 +1,7 @@
 {
     "name": "nativescript-brightness",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
-    "main": "brightness",
+    "description": "NativeScript plugin, that helps you set the brightness of the screen for Android and iOS.",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
@@ -12,36 +11,38 @@
     },
     "scripts": {
         "tsc": "tsc",
-        "build": "npm run tsc && npm run build.native",
+        "build": "npm i && npm run tsc && npm run build.native",
         "build.native": "node scripts/build-native.js",
         "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
-        "test.android": "npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
-        "test.ios": "npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
+        "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+        "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
         "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
         "plugin.tscwatch": "npm run tsc -- -w",
-        "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
-        "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
+        "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
+        "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-brightness && tns plugin add ../src",
         "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
         "prepack": "npm run build.native"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NativeScript/nativescript-brightness.git"
+    },
     "keywords": [
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "iOS",
+        "brightness"
     ],
-    "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
-    },
+    "author": "NativeScript Team",
     "bugs": {
-        "url": "https://github.com/elena-p/nativescript-brightness/issues"
+        "url": "https://github.com/NativeScript/nativescript-brightness/issues"
     },
     "license": "Apache-2.0",
-    "homepage": "https://github.com/elena-p/nativescript-brightness",
+    "homepage": "https://github.com/NativeScript/nativescript-brightness",
     "readmeFilename": "README.md",
     "devDependencies": {
         "tns-core-modules": "^5.0.0",

@@ -1,34 +1,24 @@
-# Your Plugin Name
+# NativeScript Camera
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+[![Build Status](https://travis-ci.com/NativeScript/nativescript-brightness.svg?token=QhTpmwRpzpaxz3RiGr7p&branch=master)](https://travis-ci.com/NativeScript/nativescript-brightness)
 
-Then describe what's the purpose of your plugin. 
-
-In case you develop UI plugin, this is where you can add some screenshots.
-
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+A plugin for manipulating your device's screeen brightness in NativeScript Android and iOS apps.
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
+Run the following command from the root of your project:
 
 ```javascript
-tns plugin add <your-plugin-name>
+tns plugin add nativescript-brightness
 ```
+
+This command automatically installs the necessary files, as well as stores nativescript-brightness as a dependency in your project's `package.json` file.
+
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
 
 ## API
-
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
     
 | Property | Default | Description |
 | --- | --- | --- |
