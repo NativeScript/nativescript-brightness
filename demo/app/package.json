@@ -30,10 +30,10 @@
     "requireModules": ["nativescript-brightness"]
   },
   "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.0"
+    "nativescript-dev-typescript": "~0.7.0"
   },
   "scripts": {
     "build.plugin": "cd ../src && npm run build",
-    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**'"
+    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**' --exclude '**/platforms/**'"
   }
 }

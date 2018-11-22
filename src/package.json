@@ -2,6 +2,7 @@
     "name": "nativescript-brightness",
     "version": "1.0.0",
     "description": "NativeScript plugin, that helps you set the brightness of the screen for Android and iOS.",
+    "main": "brightness",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
@@ -11,12 +12,12 @@
     },
     "scripts": {
         "tsc": "tsc",
-        "build": "npm i && npm run tsc && npm run build.native",
+        "build": "npm i && npm run tsc",
         "build.native": "node scripts/build-native.js",
         "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
         "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
         "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
-        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\" --exclude '**/platforms/**'",
         "plugin.tscwatch": "npm run tsc -- -w",
         "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
         "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
