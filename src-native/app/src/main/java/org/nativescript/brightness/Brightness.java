@@ -3,8 +3,6 @@ package org.nativescript.brightness;
 import android.app.Activity;
 import android.content.Context;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.WindowManager;
 
 public class Brightness {
     public static final int MAX_BRIGHTNESS = 255;
