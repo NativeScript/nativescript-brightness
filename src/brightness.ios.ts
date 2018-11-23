@@ -1,4 +1,5 @@
 import * as utils from "tns-core-modules/utils/utils";
+import { validateOptions } from './brightness.common';
 
 export class Brightness {
     public getNative() {
@@ -8,11 +9,11 @@ export class Brightness {
     }
 
     public get() {
-        let currentBrightness = Math.round(this.getNative() * 100);
-        return currentBrightness;
+        return Math.round(this.getNative() * 100);
     }
 
     public set(options) {
+        validateOptions(options);
         let screen = utils.ios.getter(UIScreen, UIScreen.mainScreen);
         screen.brightness = options.intensity / 100;
     }

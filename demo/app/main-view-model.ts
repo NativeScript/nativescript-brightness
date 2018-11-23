@@ -13,7 +13,7 @@ export class BrightnessModel extends Observable {
     super();
 
     this.brightness = new Brightness();
-    this.minValue = 1;
+    this.minValue = 0;
     this.maxValue = 100;
     this.currentValue = this.brightness.get();
     this.sliderValue = this.currentValue;

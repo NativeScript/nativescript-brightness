@@ -1,4 +1,5 @@
 import * as applicationModule from "tns-core-modules/application/application";
+import { validateOptions } from './brightness.common';
 
 export class Brightness {
     public getNative() {
@@ -11,6 +12,7 @@ export class Brightness {
     }
 
     public set(options) {
+        validateOptions(options);
         let context = applicationModule.android.foregroundActivity;
         let brightnessValue = Math.round(options.intensity * 255 / 100);
         org.nativescript.brightness.Brightness.setScreenBrightness(context, brightnessValue);

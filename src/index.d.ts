@@ -8,7 +8,7 @@ export declare class Brightness {
 
 export interface BrightnessOptions {
   /**
-   * Defines the desired brightness value, which should be a number between 0.0 and 1.0.
+   * Defines the desired brightness value, which should be a number between 0 and 100.
    */
   intensity: number;
 }
