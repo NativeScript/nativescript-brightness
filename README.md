@@ -48,7 +48,7 @@ brightness.set({
 ### Methods
     
 | Method | Description |
-| --- | --- | --- |
+| --- | --- |
 | set(options: BrightnessOptions) |  set screen's brightness to the desired intensity |
 | get | returns current screen brightness value as a number between 0 and 100 |
 | getNative | returns current screen brightness value as returned from the native api: between 0.0 and 1.0 for iOS and 0 and 255 for android  |
