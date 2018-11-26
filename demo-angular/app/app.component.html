@@ -1,0 +1,9 @@
+<StackLayout>
+    <Label [text]="message" class="t-20 text-center c-black" textWrap="true"></Label>
+    <GridLayout class="m-15" rows="auto" columns="50 * 50">
+        <Label class="h3" text="0" textWrap="true" row="0" col="0"></Label>
+        <Slider minValue="0" maxValue="100" [(ngModel)]="sliderValue" (valueChange)="onSliderValueChange($event)" row="0" col="1"></Slider>
+        <Label class="h3" text="100" textWrap="true" row="0" col="2"></Label>
+    </GridLayout>
+
+  </StackLayout>

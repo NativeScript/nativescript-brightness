@@ -1,0 +1,45 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.demo.angular",
+    "tns-android": {
+      "version": "5.0.0"
+    },
+    "tns-ios": {
+      "version": "5.0.0"
+    }
+  },
+  "scripts": {
+    "build.plugin": "cd ../src && npm run build",
+    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**'"
+  },
+  "dependencies": {
+    "@angular/animations": "~7.0.0",
+    "@angular/common": "~7.0.0",
+    "@angular/compiler": "~7.0.0",
+    "@angular/core": "~7.0.0",
+    "@angular/forms": "~7.0.0",
+    "@angular/http": "~7.0.0",
+    "@angular/platform-browser": "~7.0.0",
+    "@angular/platform-browser-dynamic": "~7.0.0",
+    "@angular/router": "~7.0.0",
+    "nativescript-angular": "~7.0.0",
+    "nativescript-brightness": "../src",
+    "nativescript-theme-core": "^1.0.4",
+    "rxjs": "^6.3.3",
+    "tns-core-modules": "^5.0.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "nativescript-css-loader": "~0.26.0",
+    "nativescript-dev-typescript": "~0.7.0",
+    "nativescript-dev-webpack": "~0.18.0",
+    "tslint": "~5.11.0",
+    "typescript": "^3.1.6",
+    "@angular/compiler-cli": "~7.0.0",
+    "@ngtools/webpack": "~7.0.0"
+  }
+}
