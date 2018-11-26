@@ -15,6 +15,7 @@ tns plugin add nativescript-brightness
 This command automatically installs the necessary files, as well as stores nativescript-brightness as a dependency in your project's `package.json` file.
 
 
+
 ## Usage 
 
 To use the brightness module you must first `require()` it:
