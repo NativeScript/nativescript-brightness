@@ -23,9 +23,11 @@ export class BrightnessModel extends Observable {
     this.on(Observable.propertyChangeEvent, (propertyChangeData: PropertyChangeData) => {
       if (propertyChangeData.propertyName === "sliderValue") {
         let value = Math.round(propertyChangeData.value);
-        model.brightness.set({ intensity: value });
-        model.set("currentValue", value);
-        model.setMessage();
+        if (value !== model.get("currentValue")) {
+          model.brightness.set({ intensity: value });
+          model.set("currentValue", value);
+          model.setMessage();
+        }
       }
     });
   }

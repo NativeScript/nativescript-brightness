@@ -6,7 +6,7 @@ declare module org {
 				public static MAX_BRIGHTNESS: number;
 				public static MIN_BRIGHTNESS: number;
 				public static getScreenBrightness(param0: globalAndroid.content.Context): number;
-				public static setScreenBrightness(param0: globalAndroid.app.Activity, param1: number): void;
+				public static setScreenBrightness(param0: globalAndroid.content.Context, param1: number): void;
 				public constructor();
 			}
 		}

@@ -13,13 +13,12 @@ export class AppComponent {
     public message = this.getMessage();
     public onSliderValueChange(args) {
         let slider = <Slider>args.object;
-
-        this.currentValue = slider.value;
-
         let value = Math.round(slider.value);
-        this.brightness.set({ intensity: value });
-        this.currentValue = value;
-        this.message = this.getMessage();
+        if (value !== this.currentValue) {
+            this.brightness.set({ intensity: value });
+            this.currentValue = value;
+            this.message = this.getMessage();
+        }
     }
     public getMessage() {
         return `Your screen brightness is ${this.currentValue}`;

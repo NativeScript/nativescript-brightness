@@ -18,7 +18,7 @@ public class Brightness {
         return screenBrightness;
     }
 
-    public static void setScreenBrightness(Activity context, int screenBrightness) {
+    public static void setScreenBrightness(Context context, int screenBrightness) {
         int brightness = screenBrightness;
         if (screenBrightness < MIN_BRIGHTNESS) {
             brightness = MIN_BRIGHTNESS;
