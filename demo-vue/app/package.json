@@ -1,9 +1,7 @@
 {
+  "main": "app.js",
   "android": {
     "v8Flags": "--expose_gc",
     "requireModules": ["nativescript-brightness"]
-  },
-  "main": "main",
-  "name": "demo-vue",
-  "version": "1.0.0"
+  }
 }

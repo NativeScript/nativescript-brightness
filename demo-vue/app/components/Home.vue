@@ -1,6 +1,9 @@
 <template>
-    <Page>
-        <ActionBar title="NativeScript-Vue Brightness demo"/>
+    <Page class="page">
+        <ActionBar class="action-bar">
+            <Label class="action-bar-title" text="NativeScript-Vue Brightness demo"></Label>
+        </ActionBar>
+
         <StackLayout>
             <Label class="t-20 text-center c-black" textWrap="true">
                 <span>Your screen brightness is {{ currentValue }}</span>
@@ -44,16 +47,17 @@
   }
 </script>
 
-<style scoped>
-    ActionBar {
-        background-color: #53ba82;
-        color: #ffffff;
+<style scoped lang="scss">
+    // Start custom common variables
+    @import '../app-variables';
+    // End custom common variables
+
+    // Custom styles
+    .fa {
+        color: $accent-dark;
     }
 
-    .message {
-        vertical-align: center;
-        text-align: center;
+    .info {
         font-size: 20;
-        color: #333333;
     }
 </style>

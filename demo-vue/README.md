@@ -1,19 +1,9 @@
-# NativeScript-Vue Application
+# Example for using nativescript-brightness plugin
+## This example demonstrates how to use plugin with vue
 
-> A native application built with NativeScript-Vue
+If you want to test it out on an emulator or a device you can follow the instructions below:
 
-## Usage
-
-``` bash
-# Install dependencies
-npm install
-
-# Build for production
-tns build <platform> --bundle
-
-# Build, watch for changes and debug the application
-tns debug <platform> --bundle
-
-# Build, watch for changes and run the application
-tns run <platform> --bundle
-```
+`git clone https://github.com/NativeScript/nativescript-brightness.git`  
+`cd nativescript-brightness/demo-vue`  
+`npm run build.plugin && npm install`  
+`tns run android --bundle` or `tns run ios --bundle` depending on the platform you want to test
