@@ -13,6 +13,9 @@
       "version": "5.0.0"
     }
   },
+  "scripts": {
+    "build.plugin": "cd ../src && npm run build"
+  },
   "dependencies": {
     "@vue/devtools": "5.0.0-beta.3",
     "nativescript-brightness": "../src",

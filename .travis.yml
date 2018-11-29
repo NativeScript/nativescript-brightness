@@ -17,7 +17,7 @@ matrix:
       jdk: oraclejdk8
       before_install: nvm install stable
       script:
-        - cd src && npm i && npm run tsc && cd ../demo && tns build android && cd ../demo-angular && tns build android
+        - cd src && npm i && npm run tsc && cd ../demo && tns build android && cd ../demo-angular && tns build android && cd ../demo-vue && tns build android
     
     - stage: "Build"
       os: osx
@@ -29,7 +29,7 @@ matrix:
       node_js: "8"
       jdk: oraclejdk8
       script: 
-        - cd src && npm i && npm run tsc && cd ../demo && tns build ios && cd ../demo-angular && tns build ios
+        - cd src && npm i && npm run tsc && cd ../demo && tns build ios && cd ../demo-angular && tns build ios && cd ../demo-vue && tns build ios
 
     - stage: "Webpack"
       os: osx
