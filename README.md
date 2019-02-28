@@ -1,4 +1,5 @@
 # NativeScript Brightness
+test 2
 
 [![Build Status](https://travis-ci.org/NativeScript/nativescript-brightness.svg?branch=master)](https://travis-ci.org/NativeScript/nativescript-brightness)
 [![npm](https://img.shields.io/npm/v/nativescript-brightness.svg)](https://www.npmjs.com/package/nativescript-brightness)
