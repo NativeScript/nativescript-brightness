@@ -9,7 +9,7 @@ A plugin for manipulating your device's screeen brightness in NativeScript Andro
 
 Run the following command from the root of your project:
 
-```javascript
+```
 tns plugin add nativescript-brightness
 ```
 
@@ -20,18 +20,20 @@ This plugin requires `<uses-permission android:name="android.permission.WRITE_SE
 
 ## Usage 
 
-To use the brightness module you must first `require()` it:
+To use the brightness module you must first `require()` and instantiate it:
 
 ```js
 // JavaScript
-var brightness = require("nativescript-brightness");
+var nativescriptBrightness = require("nativescript-brightness");
+var brightness = new nativescriptBrightness.Brightness();
 ```
 
 Or if you’re using TypeScript, `import` the module:
 
 ```typescript
 // TypeScript
-import * as brightness from "nativescript-brightness";
+import { Brightness } from 'nativescript-brightness';
+const brightness = new Brightness();
 ```
 
 After you have a reference to the module you can then call its `get()` and `set()` methods. For example, the code below updates you screen's brightness with an `intensity` setting of 25%.
@@ -39,8 +41,10 @@ After you have a reference to the module you can then call its `get()` and `set(
 The `intensity` can be set to a value from 1 to 100.
 
 ```js
-// my-page.js
-var brightness = require("nativescript-brightness");
+// TypeScript
+import { Brightness } from 'nativescript-brightness';
+const brightness = new Brightness();
+
 brightness.set({
     intensity: 25
 });
