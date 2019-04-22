@@ -32,6 +32,7 @@
     created: function() {
         this.brightness = new Brightness();
         this.currentValue = this.brightness.get();
+        this.brightness.set({ intensity: this.currentValue });
         this.sliderValue = this.currentValue;
     },
 
