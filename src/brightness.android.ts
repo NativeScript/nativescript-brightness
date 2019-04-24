@@ -24,8 +24,10 @@ export class Brightness {
             }
         } else {
             let context = applicationModule.android.foregroundActivity;
-            let brightnessValue = Math.round(options.intensity * 255 / 100);
-            org.nativescript.brightness.Brightness.setScreenBrightness(context, brightnessValue);
+            if (context) {
+                let brightnessValue = Math.round(options.intensity * 255 / 100);
+                org.nativescript.brightness.Brightness.setScreenBrightness(context, brightnessValue);
+            }
         }
     }
 }
