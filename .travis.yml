@@ -15,6 +15,7 @@ matrix:
         - BuildAndroid="28"
       os: linux
       jdk: oraclejdk8
+      node_js: "8"
       before_install: nvm install stable
       script:
         - cd src && npm i && npm run tsc && cd ../demo && tns build android && cd ../demo-angular && tns build android && cd ../demo-vue && tns build android --bundle
@@ -44,6 +45,7 @@ matrix:
     - stage: "Webpack"
       language: android
       os: linux
+      node_js: "8"
       env:
         - WebPack="Android"
       jdk: oraclejdk8
