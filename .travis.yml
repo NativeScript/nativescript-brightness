@@ -1,18 +1,18 @@
 branches:
   only: 
     - master
-  env:
-    global:
-      - ANDROID_PACKAGE_JS='brightness-debug-js.apk'
-      - ANDROID_PACKAGE_VUE='brightness-debug-vue.apk'
-      - ANDROID_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
-      - ANDROID_PACKAGE_FOLDER_VUE=$TRAVIS_BUILD_DIR/demo-vue/outputs
-      - ANDROID_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
-      - IOS_PACKAGE_JS='brightness-demo-js.zip'
-      - IOS_PACKAGE_VUE='brightness-demo-vue.zip'
-      - IOS_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
-      - IOS_PACKAGE_FOLDER_VUE=$TRAVIS_BUILD_DIR/demo-vue/outputs
-      - IOS_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
+env:
+  global:
+    - ANDROID_PACKAGE_JS='brightness-debug-js.apk'
+    - ANDROID_PACKAGE_VUE='brightness-debug-vue.apk'
+    - ANDROID_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
+    - ANDROID_PACKAGE_FOLDER_VUE=$TRAVIS_BUILD_DIR/demo-vue/outputs
+    - ANDROID_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
+    - IOS_PACKAGE_JS='brightness-demo-js.zip'
+    - IOS_PACKAGE_VUE='brightness-demo-vue.zip'
+    - IOS_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
+    - IOS_PACKAGE_FOLDER_VUE=$TRAVIS_BUILD_DIR/demo-vue/outputs
+    - IOS_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
 
 matrix:
   include:
