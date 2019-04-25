@@ -1,6 +1,6 @@
 {
     "name": "nativescript-brightness",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "NativeScript plugin, that helps you set the brightness of the screen for Android and iOS.",
     "main": "brightness",
     "typings": "index.d.ts",
