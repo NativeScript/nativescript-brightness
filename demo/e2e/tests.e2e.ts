@@ -48,6 +48,10 @@ describe("sample scenario", () => {
     });
 
     it("should find an element by text", async () => {
+        const locator = driver.isAndroid ? "android.widget.SeekBar" : "XCUIElementTypeSlider"
+        const slider = await driver.findElementByClassName(locator);
+        expect(slider).to.exist;
+        await slider.click();
         if(driver.isAndroid){
             const switchButton = await driver.findElementByClassName("android.widget.Switch");
             await switchButton.click();
@@ -56,14 +60,9 @@ describe("sample scenario", () => {
             const title = await driver.findElementByText("demo", SearchOptions.contains);
             expect(title).to.exist;
         }
-
-        const locator = driver.isAndroid ? "android.widget.SeekBar" : "XCUIElementTypeSlider"
-        const slider = driver.findElementByClassName(locator);
-        expect(slider).to.exist;
-        
-        const lowerBoundary = driver.findElementByText("0");
+        const lowerBoundary = await driver.findElementByText("0");
         expect(lowerBoundary).to.exist;
-        const upperBoundary = driver.findElementByText("100");
+        const upperBoundary = await driver.findElementByText("100");
         expect(upperBoundary).to.exist;
     });
 });

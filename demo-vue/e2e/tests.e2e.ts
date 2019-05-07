@@ -52,12 +52,20 @@ describe("sample scenario", () => {
         expect(title).to.exist;
 
         const locator = driver.isAndroid ? "android.widget.SeekBar" : "XCUIElementTypeSlider"
-        const slider = driver.findElementByClassName(locator);
+        const slider = await driver.findElementByClassName(locator);
         expect(slider).to.exist;
-        
-        const lowerBoundary = driver.findElementByText("0");
+        await slider.click();
+        if(driver.isAndroid){
+            const switchButton = await driver.findElementByClassName("android.widget.Switch");
+            await switchButton.click();
+            await driver.navBack();
+            await driver.wait(1000);
+            const title = await driver.findElementByText("demo", SearchOptions.contains);
+            expect(title).to.exist;
+        }
+        const lowerBoundary = await driver.findElementByText("0");
         expect(lowerBoundary).to.exist;
-        const upperBoundary = driver.findElementByText("100");
+        const upperBoundary = await driver.findElementByText("100");
         expect(upperBoundary).to.exist;
     });
 });
