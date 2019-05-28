@@ -16,11 +16,6 @@ env:
 
 matrix:
   include:
-    - stage: "Lint"
-      language: node_js
-      os: linux
-      node_js: "8"
-      script: cd ../src && npm run ci.tslint && cd ../demo && npm run ci.tslint && cd ../demo-angular && npm run ci.tslint
     - stage: "WebPack and Build"
       os: osx
       env:
@@ -118,7 +113,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd demo && npm i
+        - cd ../demo && npm i
         - travis_wait travis_retry npm run e2e -- --runType android24 --sauceLab --appPath $ANDROID_PACKAGE_JS
     - os: linux
       env:
@@ -129,7 +124,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd demo-vue && npm i
+        - cd ../demo-vue && npm i
         - travis_wait travis_retry npm run e2e -- --runType android24 --sauceLab --appPath $ANDROID_PACKAGE_VUE
     - os: linux
       env:
@@ -139,7 +134,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd demo && npm i
+        - cd ../demo && npm i
         - travis_wait travis_retry npm run e2e -- --runType sim12iPhoneX --sauceLab --appPath $IOS_PACKAGE_JS
     - os: linux
       env:
@@ -149,7 +144,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd demo-vue && npm i
+        - cd ../demo-vue && npm i
         - travis_wait travis_retry npm run e2e -- --runType sim12iPhoneX --sauceLab --appPath $IOS_PACKAGE_VUE
 
 android:
@@ -178,6 +173,7 @@ install:
     - npm install nativescript-dev-webpack@next -D
     - npm install nativescript-dev-typescript@next -D
     - ./node_modules/.bin/update-ns-webpack --deps --configs
+    - npx rimraf -- hooks node_modules platforms package-lock.json
     - npm install -D wd@latest
     - cd ../demo-angular
     - npm install tns-core-modules@next -P
@@ -186,10 +182,12 @@ install:
     - npm install nativescript-dev-typescript@next -D
     - ./node_modules/.bin/update-ns-webpack --deps --configs
     - ./node_modules/.bin/update-app-ng-deps
+    - npx rimraf -- hooks node_modules platforms package-lock.json
     - npm install -D wd@latest
     - cd ../demo-vue
     - npm install tns-core-modules@next -P
     - npm install nativescript-dev-webpack@next -D
     - npm install nativescript-dev-typescript@next -D
     - ./node_modules/.bin/update-ns-webpack --deps --configs
+    - npx rimraf -- hooks node_modules platforms package-lock.json
     - npm install -D wd@latest
