@@ -7,7 +7,7 @@ env:
     - ANDROID_PACKAGE_NG='brightness-debug-ng.apk'
     - ANDROID_PACKAGE_VUE='brightness-debug-vue.apk'
     - ANDROID_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo/outputs
-    - ANDROID_PACKAGE_FOLDER_JS=$TRAVIS_BUILD_DIR/demo-angular/outputs
+    - ANDROID_PACKAGE_FOLDER_NG=$TRAVIS_BUILD_DIR/demo-angular/outputs
     - ANDROID_PACKAGE_FOLDER_VUE=$TRAVIS_BUILD_DIR/demo-vue/outputs
     - ANDROID_SAUCE_STORAGE="https://saucelabs.com/rest/v1/storage/$SAUCE_USER"
     - IOS_PACKAGE_JS='brightness-demo-js.zip'
