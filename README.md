@@ -1,3 +1,10 @@
+## NativeScript 7
+
+* Use `@nativescript/brightness`: `~2.0.0`
+* [Source managed here](https://github.com/NativeScript/plugins)
+
+## If using 6 and below, see the following:
+
 # NativeScript Brightness
 
 [![Build Status](https://travis-ci.org/NativeScript/nativescript-brightness.svg?branch=master)](https://travis-ci.org/NativeScript/nativescript-brightness)
